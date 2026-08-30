@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════
+   ROYAL CLASSIC TOURS — Design System Tokens
+   60% Warm Ivory  |  30% Deep Forest Green  |  10% Heritage Gold
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Brand Palette ── */
+  --royal-forest: #123B2A;
+  --royal-forest-dark: #0D2C20;
+  --royal-forest-light: #1A5038;
+  --royal-gold: #C5A35A;
+  --royal-gold-soft: rgba(197, 163, 90, 0.15);
+  --royal-ivory: #F8F5EE;
+  --royal-sand: #EEE7DA;
+  --royal-ink: #17211B;
+  --royal-muted: #5F6963;
+  --royal-white: #FFFFFF;
+
+  /* ── Semantic Aliases ── */
+  --bg: var(--royal-ivory);
+  --text: var(--royal-ink);
+  --muted: var(--royal-muted);
+  --border: rgba(18, 59, 42, 0.10);
+  --border-gold: rgba(197, 163, 90, 0.25);
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 2px 8px rgba(18, 59, 42, 0.06);
+  --shadow: 0 8px 24px rgba(18, 59, 42, 0.08);
+  --shadow-lg: 0 16px 40px rgba(18, 59, 42, 0.12);
+
+  /* ── Typography ── */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+  /* ── Radius (restrained) ── */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+
+  /* ── Spacing ── */
+  --section-gap: clamp(80px, 10vw, 160px);
+  --section-gap-sm: clamp(56px, 8vw, 96px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Base Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Typography Helpers
+   ═══════════════════════════════════════════════════════════════════ */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Selection
+   ═══════════════════════════════════════════════════════════════════ */
+
+::selection {
+  background: var(--royal-gold-soft);
+  color: var(--royal-forest);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Container Utility
+   ═══════════════════════════════════════════════════════════════════ */
+
+.container-max {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.container-narrow {
+  @apply mx-auto w-full max-w-3xl px-5 sm:px-6;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Buttons — Deep Forest Primary, Outlined Secondary
+   ═══════════════════════════════════════════════════════════════════ */
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300;
+  font-family: var(--font-body);
+  border-radius: var(--radius);
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: var(--royal-forest);
+  color: var(--royal-ivory);
+}
+
+.btn-primary:hover {
+  background: var(--royal-forest-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--royal-forest);
+  border: 1.5px solid var(--royal-forest);
+}
+
+.btn-secondary:hover {
+  background: var(--royal-forest);
+  color: var(--royal-ivory);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background: transparent;
+  color: var(--royal-gold);
+  border: 1.5px solid var(--royal-gold);
+}
+
+.btn-gold:hover {
+  background: var(--royal-gold);
+  color: var(--royal-forest);
+  transform: translateY(-1px);
+}
+
+/* Hero-specific buttons (on dark backgrounds) */
+.btn-hero-primary {
+  background: var(--royal-ivory);
+  color: var(--royal-forest);
+  font-weight: 600;
+}
+
+.btn-hero-primary:hover {
+  background: var(--royal-white);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(248, 245, 238, 0.3);
+}
+
+.btn-hero-secondary {
+  background: transparent;
+  color: var(--royal-ivory);
+  border: 1.5px solid rgba(248, 245, 238, 0.4);
+}
+
+.btn-hero-secondary:hover {
+  border-color: var(--royal-ivory);
+  background: rgba(248, 245, 238, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Royal Journey Line — Signature Visual Element
+   ═══════════════════════════════════════════════════════════════════ */
+
+.journey-line {
+  width: 2px;
+  background: linear-gradient(180deg, var(--royal-gold) 0%, rgba(197, 163, 90, 0.15) 100%);
+}
+
+.journey-line-h {
+  height: 2px;
+  background: linear-gradient(90deg, var(--royal-gold) 0%, rgba(197, 163, 90, 0.15) 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Focus & Accessibility
+   ═══════════════════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid var(--royal-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Scrollbar
+   ═══════════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--royal-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--royal-forest-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--royal-forest);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Section Spacing
+   ═══════════════════════════════════════════════════════════════════ */
+
+.section-padding {
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+}
+
+.section-padding-sm {
+  padding-top: var(--section-gap-sm);
+  padding-bottom: var(--section-gap-sm);
+}
