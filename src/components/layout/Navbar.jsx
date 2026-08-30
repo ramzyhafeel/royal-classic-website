@@ -99,7 +99,7 @@ const Navbar = () => {
         )}
       >
         <Container>
-          <div className="flex items-center justify-between h-20 md:h-24">
+          <div className="flex items-center justify-between h-[76px] sm:h-22 md:h-24 lg:h-28">
             
             {/* Logo */}
             <Link to="/" className="flex items-center group z-50 py-1 shrink-0" aria-label="Royal Classic Tours Home">

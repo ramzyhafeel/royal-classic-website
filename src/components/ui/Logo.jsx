@@ -6,12 +6,12 @@ const Logo = ({
   size = 'nav', // 'nav' | 'sm' | 'md' | 'lg'
   className = '',
 }) => {
-  // Height sizing tailored for crisp proportions across all devices
+  // Height sizing tailored for bold, crisp visibility across all screen sizes
   const sizeClasses = {
-    nav: 'h-11 sm:h-12 md:h-14 lg:h-15 xl:h-16',
-    sm: 'h-8 sm:h-9 md:h-10',
-    md: 'h-12 sm:h-14 md:h-16',
-    lg: 'h-16 sm:h-20 md:h-24',
+    nav: 'h-[54px] sm:h-[62px] md:h-[68px] lg:h-[76px] xl:h-[84px]',
+    sm: 'h-8 sm:h-10 md:h-12',
+    md: 'h-12 sm:h-16 md:h-20',
+    lg: 'h-16 sm:h-22 md:h-28',
   };
 
   const currentHeight = sizeClasses[size] || sizeClasses.nav;
