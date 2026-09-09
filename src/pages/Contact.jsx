@@ -111,7 +111,7 @@ ${formData.message || 'I would like more information and a tailored itinerary.'}
         image="/images/hero/hero5.jpg" 
       />
 
-      <section className="py-16 md:py-24 bg-[var(--royal-ivory)]">
+      <section className="py-12 sm:py-16 md:py-20 bg-[var(--royal-ivory)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           
           {/* Top Quick Contact Badges */}
@@ -536,7 +536,7 @@ ${formData.message || 'I would like more information and a tailored itinerary.'}
           </div>
 
           {/* Quick FAQ Section on Contact Page */}
-          <div className="mt-24 pt-16 border-t border-[var(--royal-sand)]">
+          <div className="mt-16 pt-12 border-t border-[var(--royal-sand)]">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-[var(--royal-gold)] uppercase tracking-widest text-xs font-semibold block mb-2">
                 COMMON QUESTIONS

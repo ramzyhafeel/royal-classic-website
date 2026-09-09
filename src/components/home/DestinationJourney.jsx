@@ -202,7 +202,7 @@ export default function DestinationJourney() {
     : destinationsData.filter((item) => item.filter === activeTab);
 
   return (
-    <section className="py-20 sm:py-28 bg-[var(--royal-ivory)] relative overflow-hidden">
+    <section className="py-14 sm:py-20 bg-[var(--royal-ivory)] relative overflow-hidden">
       {/* Decorative background subtle watermark */}
       <div className="absolute top-10 right-0 w-96 h-96 rounded-full bg-[var(--royal-gold)]/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-0 w-96 h-96 rounded-full bg-[var(--royal-forest)]/5 blur-3xl pointer-events-none" />
@@ -270,7 +270,7 @@ export default function DestinationJourney() {
         {/* Destination Cards Grid */}
         <motion.div 
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12"
         >
           <AnimatePresence mode="popLayout">
             {filteredDestinations.map((dest) => (

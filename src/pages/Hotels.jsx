@@ -28,15 +28,15 @@ const Hotels = () => {
       />
 
       {/* Filters */}
-      <section className="py-8 bg-[var(--royal-ivory)] border-b border-[var(--royal-sand)]">
+      <section className="py-6 sm:py-8 bg-[var(--royal-ivory)] border-b border-[var(--royal-sand)] sticky top-[76px] lg:top-28 z-30 backdrop-blur-md bg-opacity-95">
         <div className="container mx-auto px-4 max-w-7xl flex justify-center">
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             <button
               onClick={() => setActiveCategory('All')}
-              className={`text-sm md:text-base pb-1 transition-colors duration-300 ${
+              className={`text-xs px-4 py-2 rounded-full transition-all duration-300 cursor-pointer ${
                 activeCategory === 'All'
-                  ? 'text-[var(--royal-gold)] border-b-2 border-[var(--royal-gold)] font-semibold'
-                  : 'text-[var(--royal-muted)] hover:text-[var(--royal-forest)]'
+                  ? 'bg-[#123B2A] text-white font-semibold shadow-sm ring-2 ring-[var(--royal-gold)]/40'
+                  : 'bg-white border border-[var(--royal-sand)] text-[var(--royal-muted)] hover:border-[var(--royal-gold)] hover:text-[var(--royal-forest)]'
               }`}
             >
               All Types
@@ -45,10 +45,10 @@ const Hotels = () => {
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`text-sm md:text-base pb-1 transition-colors duration-300 ${
+                className={`text-xs px-4 py-2 rounded-full transition-all duration-300 cursor-pointer ${
                   activeCategory === category
-                    ? 'text-[var(--royal-gold)] border-b-2 border-[var(--royal-gold)] font-semibold'
-                    : 'text-[var(--royal-muted)] hover:text-[var(--royal-forest)]'
+                    ? 'bg-[#123B2A] text-white font-semibold shadow-sm ring-2 ring-[var(--royal-gold)]/40'
+                    : 'bg-white border border-[var(--royal-sand)] text-[var(--royal-muted)] hover:border-[var(--royal-gold)] hover:text-[var(--royal-forest)]'
                 }`}
               >
                 {category}
@@ -59,7 +59,7 @@ const Hotels = () => {
       </section>
 
       {/* Hotel Grid */}
-      <section className="py-16 md:py-24 bg-[var(--royal-white)]">
+      <section className="py-12 sm:py-16 bg-[var(--royal-white)]">
         <div className="container mx-auto px-4 max-w-7xl">
           
           <div className="mb-12 text-center max-w-3xl mx-auto">

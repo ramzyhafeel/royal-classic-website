@@ -22,7 +22,7 @@ const NAV_ITEMS = [
   { name: 'Contact', path: '/contact' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ solid = false }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -81,9 +81,9 @@ const Navbar = () => {
 
   const whatsappUrl = createWhatsAppLink(whatsappMessages.general);
 
-  // We want to force solid navbar if we're not at the top of the page,
-  // or maybe on certain pages, but relying on isScrolled handles the dynamic part well.
-  const isSolid = isScrolled || isMobileMenuOpen;
+  // Force solid navbar if scrolled, menu open, prop passed, or on routes without dark heroes
+  const isFallbackLightRoute = location.pathname === '/not-found' || location.pathname === '/404';
+  const isSolid = isScrolled || isMobileMenuOpen || solid || isFallbackLightRoute;
 
   return (
     <>
@@ -217,9 +217,8 @@ const Navbar = () => {
               </Link>
               
               <div className="flex items-center justify-center gap-2 text-[var(--royal-forest)] font-medium">
-                <FaWhatsapp className="w-6 h-6" />
-                <a href={whatsappUrl} className="text-lg">+94 (0) XX XXX XXXX</a> 
-                {/* Note: Update phone number from site config if desired, otherwise generic placeholder */}
+                <FaWhatsapp className="w-6 h-6 text-[#25D366]" />
+                <a href={whatsappUrl} className="text-base sm:text-lg">{siteConfig.contact.whatsappDisplay || '+94 XX XXX XXXX'}</a> 
               </div>
             </div>
           </motion.div>

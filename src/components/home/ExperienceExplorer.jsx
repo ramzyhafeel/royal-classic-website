@@ -36,16 +36,16 @@ export default function ExperienceExplorer() {
   };
 
   return (
-    <section className="section-padding bg-royal-ivory">
+    <section className="py-14 sm:py-20 bg-[var(--royal-ivory)] border-b border-[var(--royal-sand)]">
       <div className="container-max">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={itemVariants}
-          className="mb-12 md:mb-16 text-center md:text-left"
+          className="mb-8 sm:mb-12 text-center md:text-left"
         >
-          <div className="text-royal-gold text-sm font-semibold tracking-widest uppercase mb-4">
+          <div className="text-royal-gold text-xs font-semibold tracking-[0.2em] uppercase mb-2">
             EXPLORE BY INTEREST
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-royal-forest">

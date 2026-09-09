@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 import { createWhatsAppLink } from '../../utils/whatsapp';
 
@@ -8,7 +8,7 @@ export default function FinalCta() {
   const whatsappUrl = createWhatsAppLink('Hello Royal Classic Tours, I would like to start planning my Sri Lanka journey!');
 
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32 bg-[var(--royal-ink)]">
+    <section className="relative overflow-hidden py-16 sm:py-24 bg-[var(--royal-ink)]">
       
       {/* Background Image with Parallax/Ken Burns feel */}
       <motion.div

@@ -55,7 +55,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-20 sm:py-28 bg-[var(--royal-ivory)] border-t border-[var(--royal-sand)]/60">
+    <section className="py-14 sm:py-20 bg-[var(--royal-ivory)] border-b border-[var(--royal-sand)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

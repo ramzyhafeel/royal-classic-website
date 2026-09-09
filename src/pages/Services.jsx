@@ -38,7 +38,7 @@ export default function Services() {
         image="/images/hero/hero6.jpg" 
       />
 
-      <section className="section-padding bg-[var(--royal-ivory)]">
+      <section className="py-14 sm:py-20 bg-[var(--royal-ivory)]">
         <div className="container-max">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
@@ -50,22 +50,26 @@ export default function Services() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08 }}
-                  className="bg-white rounded-[var(--radius)] overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col h-full border border-[var(--border)]"
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full border border-[var(--border)]/70 hover:border-[var(--royal-gold)]/40"
                 >
                   <Link to={getServiceLink(service.id)} className="flex flex-col h-full">
-                    <div className="p-6 flex-grow flex flex-col">
-                      <div className="text-[var(--royal-gold)] mb-4">
-                        <Icon size={32} strokeWidth={1.5} />
+                    <div className="p-7 flex-grow flex flex-col">
+                      <div className="w-12 h-12 rounded-xl bg-[var(--royal-ivory)] border border-[var(--border)] flex items-center justify-center text-[var(--royal-gold)] mb-5 group-hover:bg-[var(--royal-forest)] group-hover:text-white transition-all duration-300">
+                        <Icon size={24} strokeWidth={1.5} />
                       </div>
-                      <h3 className="font-display text-xl text-[var(--royal-forest)] mb-2 group-hover:text-[var(--royal-gold)] transition-colors">
+                      <h3 className="font-display text-xl text-[var(--royal-forest)] mb-2.5 group-hover:text-[var(--royal-gold)] transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-[var(--royal-muted)] text-sm">
+                      <p className="text-[var(--royal-muted)] text-sm leading-relaxed mb-4">
                         {service.shortDesc}
                       </p>
+                      <div className="mt-auto pt-3 flex items-center text-xs font-semibold text-[var(--royal-forest)] group-hover:text-[var(--royal-gold)] transition-colors">
+                        <span>Explore service</span>
+                        <span className="ml-1.5 group-hover:translate-x-1 transition-transform">&rarr;</span>
+                      </div>
                     </div>
                     {service.image && (
-                      <div className="relative aspect-[3/2] w-full overflow-hidden mt-auto">
+                      <div className="relative aspect-[16/10] w-full overflow-hidden mt-auto border-t border-[var(--border)]/50">
                         <img 
                           src={service.image} 
                           alt={service.title} 
@@ -82,10 +86,15 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-16 sm:py-20 bg-white border-t border-[var(--border)]">
         <div className="container-max text-center max-w-2xl mx-auto">
+          <span className="text-[var(--royal-gold)] uppercase tracking-widest text-xs font-semibold block mb-2">
+            TAILOR-MADE EXPERIENCES
+          </span>
           <h2 className="font-display text-3xl md:text-4xl text-[var(--royal-forest)] mb-4">Not sure what you need?</h2>
-          <p className="text-[var(--royal-muted)] mb-8 text-lg">Let us help plan your Sri Lanka journey.</p>
+          <p className="text-[var(--royal-muted)] mb-8 text-base sm:text-lg">
+            Let our local specialists craft the perfect itinerary tailored to your dates, preferences, and pace.
+          </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/customize-tour" className="btn btn-primary w-full sm:w-auto px-8 py-3.5">
               Plan My Trip

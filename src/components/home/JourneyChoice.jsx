@@ -6,15 +6,18 @@ import { createWhatsAppLink, whatsappMessages } from '../../utils/whatsapp';
 
 const JourneyChoice = () => {
   return (
-    <section className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <section className="py-12 sm:py-16 bg-white border-b border-[var(--royal-sand)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
         <div className="text-center">
+          <span className="text-[#C5A35A] uppercase tracking-[0.2em] text-xs font-semibold mb-2 block">
+            CHOOSE YOUR TRAVEL STYLE
+          </span>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-display text-3xl sm:text-4xl lg:text-5xl text-[var(--royal-ink)] mb-4"
+            className="font-display text-3xl sm:text-4xl lg:text-5xl text-[var(--royal-ink)] mb-3"
           >
             How would you like to travel?
           </motion.h2>
@@ -23,22 +26,22 @@ const JourneyChoice = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-[var(--royal-muted)] max-w-3xl mx-auto text-base sm:text-lg"
+            className="text-[var(--royal-muted)] max-w-2xl mx-auto text-sm sm:text-base"
           >
             Already planned your Sri Lanka holiday? Hire a private vehicle and driver. Need everything arranged? Let Royal Classic Tours plan the complete journey.
           </motion.p>
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 rounded-2xl overflow-hidden shadow-sm">
           {/* LEFT SIDE - TRANSPORT ONLY */}
           <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-[#EEE7DA] p-10 lg:p-16 flex flex-col justify-center min-h-[500px]"
+            className="bg-[#EEE7DA] p-8 sm:p-10 lg:p-12 rounded-2xl flex flex-col justify-center border border-[#123B2A]/10"
           >
             <div className="max-w-xl mx-auto lg:ml-auto lg:mr-8 w-full">
               <span className="text-[#C5A35A] uppercase tracking-widest text-xs font-semibold block mb-4">
@@ -89,7 +92,7 @@ const JourneyChoice = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-[#123B2A] p-10 lg:p-16 flex flex-col justify-center min-h-[500px] text-white"
+            className="bg-[#123B2A] p-8 sm:p-10 lg:p-12 rounded-2xl flex flex-col justify-center border border-[var(--royal-gold)]/20 text-white"
           >
             <div className="max-w-xl mx-auto lg:mr-auto lg:ml-8 w-full">
               <span className="text-[#C5A35A] uppercase tracking-widest text-xs font-semibold block mb-4">

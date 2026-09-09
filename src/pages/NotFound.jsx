@@ -6,8 +6,8 @@ import { createWhatsAppLink, whatsappMessages } from '../utils/whatsapp';
 
 export default function NotFound() {
   return (
-    <Layout>
-      <section className="min-h-[70vh] flex items-center justify-center bg-royal-ivory relative overflow-hidden">
+    <Layout solidNavbar={true}>
+      <section className="min-h-[75vh] pt-28 sm:pt-36 pb-20 flex items-center justify-center bg-[var(--royal-ivory)] relative overflow-hidden">
         {/* Optional subtle background pattern or destination image can go here */}
         <div className="absolute inset-0 opacity-5 bg-[url('/images/hero/hero3.jpg')] bg-cover bg-center mix-blend-luminosity"></div>
         

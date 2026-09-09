@@ -7,7 +7,7 @@ export default function GalleryPreview() {
   const displayImages = gallery.slice(0, 6);
 
   return (
-    <section className="py-24 sm:py-32 bg-[var(--royal-ivory)]">
+    <section className="py-14 sm:py-20 bg-[var(--royal-ivory)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div
@@ -15,7 +15,7 @@ export default function GalleryPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          className="mb-10 text-center"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-[var(--royal-forest)]">
             Sri Lanka, remembered.

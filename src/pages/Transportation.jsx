@@ -90,7 +90,7 @@ const Transportation = () => {
       />
 
       {/* Section 1 - Airport Transfers */}
-      <section className="py-20 md:py-32 bg-[var(--royal-white)]">
+      <section className="py-14 sm:py-20 bg-[var(--royal-white)]">
         <div className="container mx-auto px-4 max-w-5xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -141,7 +141,7 @@ const Transportation = () => {
       </section>
 
       {/* Section 2 - Services Grid */}
-      <section className="py-20 bg-[var(--royal-ivory)] border-y border-[var(--royal-sand)]">
+      <section className="py-14 sm:py-20 bg-[var(--royal-ivory)] border-y border-[var(--royal-sand)]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl text-[var(--royal-forest)] mb-4">Flexible Travel Solutions</h2>
@@ -168,7 +168,7 @@ const Transportation = () => {
       </section>
 
       {/* Section 3 - Vehicle Options */}
-      <section className="py-20 md:py-32 bg-[var(--royal-white)]">
+      <section className="py-14 sm:py-20 bg-[var(--royal-white)]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl md:text-4xl text-[var(--royal-forest)] mb-4">Choose your vehicle.</h2>
