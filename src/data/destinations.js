@@ -140,7 +140,20 @@ export const destinations = [
     ],
     highlights: ["Jaya Sri Maha Bodhi", "Ruwanwelisaya Stupa", "Abhayagiri Dagoba", "Isurumuniya Viharaya"],
     coordinates: "8.3114° N, 80.4037° E",
-    image: "/images/hero/hero3.jpg"
+    image: "/images/destinations/famous/anuradhapura-ruwanwelisaya.jpg"
+  },
+  {
+    title: "Polonnaruwa",
+    slug: "polonnaruwa",
+    category: "Culture & Heritage",
+    summary: "The medieval royal capital of Sri Lanka, renowned for monumental rock-cut Buddha statues.",
+    description: [
+      "Polonnaruwa succeeded Anuradhapura as the medieval capital and showcases extraordinary stone craftsmanship.",
+      "The archaeological park includes the iconic Gal Vihara, ancient palaces, and monumental reservoirs."
+    ],
+    highlights: ["Gal Vihara", "Royal Palace of King Parakramabahu", "Polonnaruwa Vatadage", "Parakrama Samudra"],
+    coordinates: "7.9403° N, 81.0188° E",
+    image: "/images/destinations/famous/polonnaruwa-gal-vihara.jpg"
   },
   {
     title: "Bentota",
